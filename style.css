@@ -126,6 +126,31 @@ button:focus {
     outline: none;
 }
 
+.chin{
+    position: relative;
+    top: 550px;
+    width: 420px;
+    margin: 0 auto;
+    border-style: dashed;
+    border-width: 3px;
+    border-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+}
+
+#shit{
+    margin-left: 10px;
+    text-align: center; 
+}
+
+#won{
+    font-family: Lato;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
 i {
     color: #EB4D4D;
     display: inline-block;
