@@ -10,7 +10,7 @@ GAME RULES:
 - BUT, if the player rolls a 1, all his ROUND score gets lost. After that, it's the next player's turn
 - The player can choose to 'Hold', which means that his ROUND score gets added to his GLOBAL score. After that, it's the next player's turn
 - A player looses his ENTIRE GLOBAL score when he rolls two 6's in a row. After that, it's the next player's turn.
-- The first player to reach the bill amount set in the textbox at the beginning of the game (Which is indicated in the GLOBAL score) wins the game
+- The first player to reach the bill amount set in the textbox at the beginning of the game (Which is indicated in the GLOBAL score) wins the game, and the looser must pay the bill.
 
 
 I share the project link below so that you can watch its current state at any given moment:
