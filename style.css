@@ -126,14 +126,28 @@ button:focus {
     outline: none;
 }
 
+#el-titulo{
+    /*border-style: dashed;
+    border-width: 3px;
+    border-color: red; */
+    color: darkred;
+    position: absolute;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 43px;
+    text-transform: uppercase;
+    top: 10px;
+    
+}
 .chin{
     position: relative;
-    top: 550px;
-    width: 420px;
+    top: 70px;
+    width: 520px;
     margin: 0 auto;
-    border-style: dashed;
+   /* border-style: dashed;
     border-width: 3px;
-    border-color: red;
+    border-color: red; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -147,7 +161,7 @@ button:focus {
 
 #won{
     font-family: Lato;
-    font-size: 18px;
+    font-size: 23px;
     text-transform: uppercase;
 }
 
@@ -162,7 +176,7 @@ i {
     transition: margin 0.3s;
 }
 
-.btn-new { top: 45px;}
+.btn-new { top: 527px;}
 .btn-roll { top: 403px;}
 .btn-hold { top: 467px;}
 
