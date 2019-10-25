@@ -9,7 +9,11 @@ GAME RULES:
 
 //Defining variables
 
-var scores, roundScores, activePlayer, gamePlaying;
+var scores, roundScores, activePlayer, gamePlaying, sixPresent = 0, validation = 0;
+
+function timeFunction() {
+            setTimeout(nextPlayer, 3000);
+         }
 
 
 init();
@@ -27,9 +31,33 @@ document.querySelector('.btn-roll').addEventListener('click', function(){
 
         //3. Update the round score IF the rolled number was NOT a 1
         if (dice !== 1){
+            //Check to see the sum 6 + 6
+            if (dice == 6){
+                sixPresent += dice;
+                if (sixPresent == 12){
+                     
+                   roundScore = 0;
+                   sixPresent = 0; 
+                    scores[activePlayer] = 0;
+                    
+                    document.querySelector('#score-' + activePlayer).textContent = scores[activePlayer];
+                    document.querySelector('#current-' + activePlayer).textContent = "U lose it all.";
+                    
+                    timeFunction();
+                
+                    
+                } else {
+                   
+                    roundScore += dice;
+                     document.querySelector('#current-' + activePlayer).textContent = roundScore;   
+                }
+                
+            } else {
             //add score
             roundScore += dice;
+            sixPresent = 0;
             document.querySelector('#current-' + activePlayer).textContent = roundScore;
+            }
         }else{
             nextPlayer();
         } 
@@ -42,6 +70,7 @@ document.querySelector('.btn-hold').addEventListener('click', function(){
     if(gamePlaying){
         //add current score to global score
         scores[activePlayer] += roundScore;
+        sixPresent = 0;
 
         //Update the UI
         document.querySelector('#score-' + activePlayer).textContent = scores[activePlayer];
@@ -78,7 +107,7 @@ function nextPlayer(){
         /*document.querySelector('.player-0-panel').classList.remove('active');
         document.querySelector('.player-0-panel').classList.add('active');*/
         
-        document.querySelector('.dice').style.display = 'none';
+        //document.querySelector('.dice').style.display = 'none';
     
 }
 
@@ -90,7 +119,7 @@ function init(){
     activePlayer = 0;
     gamePlaying = true;
     
-    document.querySelector(".dice").style.display = "none";
+   // document.querySelector(".dice").style.display = "none";
 
     document.getElementById('score-0').textContent = '0';
     document.getElementById('score-1').textContent = '0';
