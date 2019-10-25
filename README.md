@@ -8,9 +8,9 @@ BASIC GAME RULES:
 - The player can choose to 'Hold', which means that his ROUND score gets added to his GLBAL score. After that, it's the next player's turn
 - The first player to reach 100 points on GLOBAL score wins the game
 
+
 RULES ADDED AS A FIRST CHALLENGE:
 - A player looses his ENTIRE score when he rolls two 6 in a row. After that, it's the next player's turn.
-
-I share the link of the project so that everyone can see the current state of the project at any given moment:
+I share the link so that you can see the project current state:
 
 https://juantobiasdl7.github.io/The-Pig-Game/
