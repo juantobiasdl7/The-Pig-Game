@@ -56,7 +56,7 @@ body {
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 2px;
-    font-weight: 100;
+    font-weight: 300;
     margin-top: 20px;
     margin-bottom: 10px;
     position: relative;
@@ -126,6 +126,56 @@ button:focus {
     outline: none;
 }
 
+.dog{
+    position: absolute;
+    width: 100%;
+    /*border-style: dashed;
+    border-width: 3px;
+    border-color: red; */
+}
+
+.doggy{
+    margin-left: 70%;
+}
+
+#el-titulo{
+    /*border-style: dashed;
+    border-width: 3px;
+    border-color: red; */
+    position: absolute;
+    color: black;
+    width: 100%;
+    text-transform: uppercase;
+    top: 30px;
+    font-weight: 900;
+    font-size: 33px;
+    font-style: italic;
+}
+.chin{
+    position: relative;
+    top: 70px;
+    width: 520px;
+    margin: 0 auto;
+   /* border-style: dashed;
+    border-width: 3px;
+    border-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+}
+
+#shit{
+    margin-left: 10px;
+    text-align: center; 
+}
+
+#won{
+    font-family: Lato;
+    font-size: 23px;
+    text-transform: uppercase;
+}
+
 i {
     color: #EB4D4D;
     display: inline-block;
@@ -137,7 +187,7 @@ i {
     transition: margin 0.3s;
 }
 
-.btn-new { top: 45px;}
+.btn-new { top: 527px;}
 .btn-roll { top: 403px;}
 .btn-hold { top: 467px;}
 
