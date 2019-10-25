@@ -15,4 +15,4 @@ GAME RULES:
 
 I share the project link below so that you can watch its current state at any given moment:
 
-https://juantobiasdl7.github.io/The-Pig-Game/
+https://juantobiasdl7.github.io/Who-Pays-The-Bill/
