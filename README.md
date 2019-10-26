@@ -12,6 +12,8 @@ GAME RULES:
 - A player looses his ENTIRE GLOBAL score when he rolls two 6's in a row. After that, it's the next player's turn.
 - The first player to reach the bill amount set in the textbox at the beginning of the game (Which is indicated in the GLOBAL score) wins the game, and the looser must pay the bill.
 
+New feature:
+Add another dice to the game, so that there are two dices now. The player looses his ROUND score when one of them is a 1 and his GLOBAL score when the two dices are 6.
 
 I share the project link below so that you can watch its current state at any given moment:
 
