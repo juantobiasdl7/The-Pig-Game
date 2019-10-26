@@ -37,11 +37,11 @@ document.querySelector('.btn-roll').addEventListener('click', function(){
         //3. Update the round score IF the rolled number was NOT a 1
         if (dice !== 1 & diceTwo !== 1){
             //Check to see the sum 6 + 6
-            twelvePresent = dice + diceTwo;
+            twelvePresent += (dice + diceTwo);
             if (twelvePresent == 12){
                      
                    roundScore = 0;
-                   twelPresent = 0; 
+                   twelvePresent = 0; 
                     scores[activePlayer] = 0;
                     
                     document.querySelector('#score-' + activePlayer).textContent = scores[activePlayer];
@@ -49,16 +49,17 @@ document.querySelector('.btn-roll').addEventListener('click', function(){
                     
                     timeFunction();
                 
-                } else {
-                   
-                    roundScore += dice + diceTwo;
-                     document.querySelector('#current-' + activePlayer).textContent = roundScore;   
-                }
+            } else {
+
+                twelvePresent = 0;
+                roundScore += (dice + diceTwo);
+                 document.querySelector('#current-' + activePlayer).textContent = roundScore;   
+            }
                 
         }else{
             nextPlayer();
         } 
-
+    }
 });
 
 
@@ -70,7 +71,6 @@ document.querySelector('.btn-hold').addEventListener('click', function(){
     if(gamePlaying){
         //add current score to global score
         scores[activePlayer] += roundScore;
-        sixPresent = 0;
 
         //Update the UI
         document.querySelector('#score-' + activePlayer).textContent = scores[activePlayer];
@@ -78,7 +78,6 @@ document.querySelector('.btn-hold').addEventListener('click', function(){
         //Check if player won the game
         if (scores[activePlayer] >= x){
             document.querySelector('#name-' + activePlayer).textContent = 'Winner!';
-            document.querySelector('.dice').style.display = 'none';
 
             document.querySelector('.player-' + activePlayer + '-panel').classList.add('winner');
 
