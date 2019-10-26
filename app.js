@@ -9,7 +9,7 @@ GAME RULES:
 
 //Defining variables
 
-var scores, roundScores, activePlayer, gamePlaying, sixPresent = 0, validation = 0;
+var scores, roundScores, activePlayer, gamePlaying, twelvePresent = 0, validation = 0;
 
 function timeFunction() {
             setTimeout(nextPlayer, 3000);
@@ -23,21 +23,25 @@ document.querySelector('.btn-roll').addEventListener('click', function(){
     if(gamePlaying){
         //1. Random number
         var dice = Math.floor(Math.random() * 6) + 1;
+        var diceTwo = Math.floor(Math.random() * 6) + 1;
 
         //2. Display the result
         var diceDOM = document.querySelector('.dice');
         diceDOM.style.display = 'block';
         diceDOM.src = 'dice-' + dice + '.png';
+        
+        var diceDOMTwo = document.querySelector('.dice-two');
+        diceDOMTwo.style.display = 'block';
+        diceDOMTwo.src = 'dice-' + diceTwo + '.png';
 
         //3. Update the round score IF the rolled number was NOT a 1
-        if (dice !== 1){
+        if (dice !== 1 & diceTwo !== 1){
             //Check to see the sum 6 + 6
-            if (dice == 6){
-                sixPresent += dice;
-                if (sixPresent == 12){
+            twelvePresent = dice + diceTwo;
+            if (twelvePresent == 12){
                      
                    roundScore = 0;
-                   sixPresent = 0; 
+                   twelPresent = 0; 
                     scores[activePlayer] = 0;
                     
                     document.querySelector('#score-' + activePlayer).textContent = scores[activePlayer];
@@ -45,23 +49,16 @@ document.querySelector('.btn-roll').addEventListener('click', function(){
                     
                     timeFunction();
                 
-                    
                 } else {
                    
-                    roundScore += dice;
+                    roundScore += dice + diceTwo;
                      document.querySelector('#current-' + activePlayer).textContent = roundScore;   
                 }
                 
-            } else {
-            //add score
-            roundScore += dice;
-            sixPresent = 0;
-            document.querySelector('#current-' + activePlayer).textContent = roundScore;
-            }
         }else{
             nextPlayer();
         } 
-    }
+
 });
 
 
